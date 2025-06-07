@@ -1,0 +1,124 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Arial;
+    box-sizing: border-box;
+}
+
+body {
+    background: rgb(240, 240, 240);
+    padding: 50px;
+}
+
+.card {
+    margin: 50px auto;
+    max-width: 500px;
+    width: 100%;
+    background: rgb(255, 255, 255);
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 10px 10px 50px 20px rgba(0, 0, 0, 0.4);
+    transition: transform 0.5s;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.card img {
+    width: 100%;
+}
+
+.card h3 {
+    font-size: 24px;
+    padding-top: 15px;
+
+}
+
+.card p {
+    font-size: larger;
+
+}
+
+.price {
+    font-weight: bolder;
+    font-size: xx-large;
+    color: #034c03;
+}
+
+.old-price {
+    margin-left: 15px;
+    font-size: 20px;
+    text-decoration: line-through;
+    text-decoration-color: brown;
+    color: darkgrey;
+}
+
+button {
+    padding: 20px 50px;
+    color: white;
+    background: linear-gradient(135deg, #8570ff 11%, #00b7ba 50%, #02d37f 91%);
+    border-radius: 10px;
+    font-size: 20px;
+    transition: transform 0.5s;
+    border: 0;
+    cursor: pointer;
+}
+
+button:hover {
+    background: white;
+    color: darkgreen;
+    border-color: darkgreen;
+    box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 1);
+
+}
+
+button:active {
+    background: rgb(0, 0, 0);
+    color: darkgreen;
+    border-color: darkgreen;
+    transform: scale(0.95);
+}
+
+svg {
+    fill: rgba(255, 0, 0, 0);
+    stroke: black;
+    stroke-width: 5%;
+    width: 6%;
+    height: auto;
+    float: right;
+    margin: 5px;
+    cursor: pointer;
+}
+
+svg:hover {
+    fill: rgb(255, 255, 255);
+    stroke: red;
+    stroke-width: 5%;
+    filter: drop-shadow(0px 0px 5px rgba(0, 0, 0, 0.5));
+    transform: scale(1.1);
+}
+
+svg:active {
+    fill: red;
+    stroke:black;
+    stroke-width: 5%;
+    filter: drop-shadow(0px 0px 5px rgba(0, 0, 0, 0.5));
+    transform: scale(0.90);
+}
+
+svg:focus {
+    fill: red;
+    stroke:black;
+    stroke-width: 5%;
+    filter: drop-shadow(0px 0px 5px rgba(0, 0, 0, 0.5));
+    transform: scale(0.90);
+}
+
+svg:target {
+    fill: red;
+    stroke:black;
+    stroke-width: 5%;
+    filter: drop-shadow(0px 0px 5px rgba(0, 0, 0, 0.5));
+    transform: scale(0.90);
+}
