@@ -1,0 +1,178 @@
+/* .box {
+    width: 200px;
+    height: 200px;
+    background: linear-gradient(darkblue, darkcyan);
+    position: absolute;
+    left: 200px;
+    top: 200px;
+    animation: rotate 10s;
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+} */
+
+
+/* 
+<section class="hero">
+
+        <div class="hero-text">
+
+            <h1>Заголовок</h1>
+
+            <button>Кнопка</button>
+
+        </div>
+
+    </section> */
+
+/* 
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    height: 400px;
+    background: linear-gradient(0deg, darkcyan, darkblue
+            /* red, yellow */
+/* );
+    display: flex;
+    justify-self: center;
+    align-items: center;
+} */
+/* 
+.hero-text {
+    background: white;
+    padding: 20px 40px;
+    border-radius: 10px;
+
+    display: flex;
+    justify-self: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+
+}
+
+h1 {
+    font-size: 72px;
+    font-weight: bold;
+}
+
+button{
+    /* background:transparent; или none*/
+/* border: 1Px solid black; */
+/* padding: 10px 20px; */
+/* border-radius: 5px;} */
+
+
+
+body {
+
+    font-family: Arial;
+
+}
+
+
+
+.hero {
+
+    height: 400px;
+
+    background: linear-gradient(0deg, darkcyan, darkblue);
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+}
+
+
+
+.hero-text {
+
+    background: white;
+
+    padding: 20px 40px;
+
+    border-radius: 10px;
+
+
+
+    display: flex;
+
+    justify-self: center;
+
+    align-items: center;
+
+    flex-direction: column;
+
+    gap: 20px;
+
+}
+
+
+
+h1 {
+
+    font-size: 72px;
+
+    font-weight: bold;
+
+}
+
+
+
+button {
+
+    background: transparent;
+
+    border: 1px solid black;
+
+    padding: 10px 20px;
+
+    border-radius: 5px;
+
+}
+
+.hero {
+    position: relative;
+    overflow: hidden;
+}
+
+.box {
+    background: rgba(255, 255, 255, 0.2);
+    position: absolute;
+    border-radius: 10px;
+}
+
+.box-1 {
+    width: 100px;
+    height: 100px;
+    left: 10px;
+    top: 120%;
+    animation: translate 10s infinite linear;
+}
+
+.box-2 {
+    width: 300px;
+    height: 300px;
+    right: 30px;
+    top: 120%;
+    animation: translate 30s infinite linear;
+}
+
+@keyframes translate {
+    0% {
+        transform: translateY(0px) rotate(0deg);
+    }
+
+    100% {
+        transform: translateY(-800px) rotate(360deg);
+    }
+}
