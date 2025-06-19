@@ -44,14 +44,14 @@ header{
     /* color: black; */
 }
 
-.shapka-links {
+.shapka-nav {
     display: flex;
     align-items: center;
     gap: 35px;
     /* padding-right: 50px; */
 }
 
-.shapka-links button {
+.shapka-nav button {
     padding: 10px 20px;
     background: black;
     color: white;
@@ -63,3 +63,28 @@ header{
     top: -500px;
     z-index: 9;
 }
+
+.hero{
+    display: flex;
+    /* align-items: center; */
+    justify-content: space-between;
+    gap: 10px;
+    padding: 50px 100px;
+    
+}
+
+.hero h2{
+font-size: 24px;
+padding: 0px 0px 20px ;
+}
+
+.hero-direction h3 p{
+    color: darkgrey;
+}
+
+.shapka-btn-menu ul{
+    display: flex;
+    gap: 10px;
+    justify-content: space-evenly;
+}
+
