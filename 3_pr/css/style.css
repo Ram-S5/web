@@ -2,35 +2,64 @@
     box-sizing: border-box;
 }
 
-.shapka{
+body header a {
+    color: black;
+    text-decoration: none;
+    font-weight: 700;
+}
+
+header{
+    position: sticky;
+    top: 0px;
+    background: white;
+}
+
+.shapka {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    padding: 16px 100px;
+    box-shadow: 0px 10px 8px 0px rgba(34, 60, 80, 0.2);
+
 }
 
 .logo {
     display: flex;
     align-items: center;
     gap: 10px;
-    padding: 20px 50px;
+    /* padding: 20px 50px; */
     /* border: 1px solid black; */
     /* width: 300px; */
-    text-decoration: none;
+    /* text-decoration: none; */
 }
 
 .logo img {
     width: 50px;
 }
 
-.logo p{
-    font-size: 24px;
-    font-weight: 800;
-    /* text-decoration: none; */
-    color: black;
-    
-}
 .logo span {
-    font-size: 16px;
+    font-size: 20px;
+    /* font-weight: 800; */
     /* text-decoration: none; */
+    /* color: black; */
 }
 
+.shapka-links {
+    display: flex;
+    align-items: center;
+    gap: 35px;
+    /* padding-right: 50px; */
+}
+
+.shapka-links button {
+    padding: 10px 20px;
+    background: black;
+    color: white;
+    border-radius: 5px;
+}
+
+.shapka-btn-menu{
+    display: block;
+    top: -500px;
+    z-index: 9;
+}
