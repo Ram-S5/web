@@ -27,6 +27,7 @@ body button {
     color: white;
     height: 50px;
     font-size: 16px;
+    cursor: pointer
 }
 
 body header a,
@@ -176,7 +177,12 @@ footer {
     display: flex;
     align-items: center;
     gap: 50px
+    
 }
+
+ .footer-social img:hover { 
+    filter: brightness(10%);
+ }
 
 footer img {
     width: 30px;
