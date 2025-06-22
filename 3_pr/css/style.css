@@ -1,23 +1,40 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
 * {
     box-sizing: border-box;
 }
 
-body{
-   max-width: 100%; 
-   margin: 10px auto;
+body {
+    max-width: 1440px;
+    margin: 0 auto;
+    font-family: Inter, sans-serif;
+    padding: 0px 100px;
 }
 
-body header a {
+hr {
+    height: 1px;
+    border: none;
+    color: rgb(200, 200, 200);
+    background-color: rgb(200, 200, 200);
+    /*либо можно задать толщину и цвет границы конктретного элемента, т.к. у меня данные линии в разных областях страницы я выбрал такое решение*/
+
+}
+
+body button {
+    border-radius: 8px;
+    border: none;
+    background: black;
+    color: white;
+    height: 50px;
+    font-size: 16px;
+}
+
+body header a,
+.footer-links h3 {
     color: black;
     text-decoration: none;
-    font-weight: 700;
-
-
+    font-weight: 500;
 }
-
-/* wrapper{
-    max-width: 1450px;
-} */
 
 header {
     position: sticky;
@@ -29,45 +46,28 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 16px 100px;
-    box-shadow: 0px 10px 8px 0px rgba(34, 60, 80, 0.2);
+    padding: 30px 0px;
+    font-size: 20px;
+    /* box-shadow: 0px 10px 8px 0px rgba(34, 60, 80, 0.2); */
     /* z-index: 10000; */
-
 }
 
 .logo {
     display: flex;
     align-items: center;
     gap: 10px;
-    /* padding: 20px 50px; */
-    /* border: 1px solid black; */
-    /* width: 300px; */
-    /* text-decoration: none; */
-}
-
-.logo img {
-    width: 50px;
-}
-
-.logo span {
-    font-size: 20px;
-    /* font-weight: 800; */
-    /* text-decoration: none; */
-    /* color: black; */
 }
 
 .shapka-nav {
     display: flex;
     align-items: center;
-    gap: 35px;
-    /* padding-right: 50px; */
+    gap: 40px;
 }
 
 .shapka-nav button {
     padding: 10px 20px;
-    background: black;
-    color: white;
-    border-radius: 5px;
+
+
 }
 
 .shapka-btn-menu {
@@ -78,41 +78,144 @@ header {
     gap: 40px;
     position: absolute;
     background-color: whitesmoke;
-    box-shadow: 0px 10px 8px 0px rgba(34, 60, 80, 0.2);
+    /* box-shadow: 0px 10px 8px 0px rgba(34, 60, 80, 0.2); */
     z-index: -1;
-    /* transition: 0.1s; */
 }
 
 .shapka-btn-menu ul {
     display: flex;
     flex-direction: column;
     gap: 10px;
-  
+
 
 }
 
 .hero {
     display: flex;
-    /* align-items: center; */
     justify-content: space-between;
     gap: 10px;
-    padding: 50px 100px;
+    margin: 50px 0px 70px;
 
-}
-
-.hero img{
-    width: 50%;
 }
 
 .hero h1 {
-    font-size: 24px;
-    padding: 0px 0px 20px;
+    font-size: 40px;
+    font-weight: 600;
 }
 
-.hero-direction h2, p {
+.hero-direction {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    max-width: 500px;
+}
+
+.hero-direction h2,
+p,
+.footer-links a {
+    text-decoration: none;
     color: rgb(100, 100, 100);
-    padding: 10px 0px;
+}
+
+.hero-direction h2,
+span {
+    font-size: 24px;
+}
+
+.hero button {
+    width: 100%;
+}
+
+.hero-description {
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.products {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.r_prod,
+footer h2 {
+    font-size: 24px;
+
+}
+
+.products {
+    margin: 30px 0px 70px;
+}
+
+.products,
+.products span {
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.products div {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.products div img {
+    margin-bottom: 20px;
+}
+
+footer {
+    margin: 60px 0px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer-main {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.footer-social {
+    display: flex;
+    align-items: center;
+    gap: 50px
+}
+
+footer img {
+    width: 30px;
+    border-radius: 5px;
+}
+
+.footer-links {
+    margin-right: 100px;
+    display: flex;
+    justify-content: space-evenly;
+    gap: 170px;
+}
+
+.footer-links ul {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
 }
 
 
-/* хиро, текст, расположение, футер */
+/*В качестве практики добавил немного медиа запросов для адаптивности*/
+@media (max-width: 1440px) {
+    .products {
+        display: flex;
+        flex: auto;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+
+    .products div {
+        width: 45%;
+    }
+
+    .hero img {
+        width: 50%;
+        height: 50%;
+    }
+
+}
