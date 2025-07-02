@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            font-family: cursive;
+        }
+
+        .danger {
+            background-color: white;
+            color: darkred;
+            border: 4px solid darkred;
+            border-radius: 10px;
+            padding: 5px 10px;
+        }
+
+        .success {
+            background-color: white;
+            color: darkgreen;
+            border: 4px solid darkgreen;
+            border-radius: 10px;
+            padding: 5px 10px;
+        }
+
+        .danger-inverse {
+            background-color: darkred;
+            color: white;
+            border: 4px solid darkred;
+            border-radius: 10px;
+            padding: 5px 10px;
+        }
+
+        .buttonZ {
+            border-radius: 10px;
+            font-size: 22px;
+            padding: 5px 10px;
+            margin: 10px 0px;
+            display: block;
+            width: 100%;
+        }
+
+        .primary {
+            background-color: white;
+            color: darkmagenta;
+            border: 2px solid darkmagenta;
+        }
+
+        .simple-button {
+            background-color: darkcyan;
+            color: black;
+            border: 2px solid black;
+
+        }
+    </style>
+
+</head>
+
+<body>
+
+    Часть 1<br><br>
+
+    <h1>Заголовок</h1>
+    <p>Абзац</p>
+    <!--
+console.log("Hello, world")  -  Создаём в консоли в браузере привет мир
+    alert("Helo, world")  -   Всплывающее окно
+document.body.children[1].innerHTML = "Привет"; - Создали для документа в боди для второго! дочернего элемента надпись "Привет"  (А именно заменили надпись Абзац на Привет)
+
+document.body.innerHTML = "";  -  А так уберём всю информацию со страницы документа
+
+const btn = document.createElement("button");  -  Создали новый элемент под названием бтн
+
+document.body.appendChild(btn);  -  Вывели его на страницу документа в боди
+
+btn.innerHTML = "Buttoncreate"   -   задали текст внутри элемента
+
+
+-->
+    <hr>
+
+
+    Часть 2<br><br>
+    <button class="send" id="btn-send">Отпарвить</button>
+    <!-- создали кнопку чтобы потом применить к ней стили бтн сенд скриптом-->
+
+    <!-- Зададим ещё одну кнопку "Отмена" -->
+    <button class="cancel">Отмена</button>
+
+    <!-- <div class="buttons"></div> -->
+
+    <hr>
+
+    Часть 3 <br><br>
+
+    <button class="primary btn-create">Создать новую кнопку</button>
+    <!-- Представим ситуацию что БТН креате нет (это для части скрипта с виндов, строчку выше закомментил) -->
+    <div class="buttonz"></div>
+    <hr>
+    <br><br>
+    Всё что ниже это создано скриптом и частично выше
+    <br><br>
+
+    <script>
+        // Часть2
+        const btn = document.createElement('button');
+        btn.innerHTML = 'Кнопка';
+        document.body.appendChild(btn);
+
+        const img = document.createElement("img");
+        img.src = "../3_pr/img/Image-1.png";
+        // строкой выше я ещё проверил могу ли я в скрипте вылезти из папки на несколько уровней, чтоб взять картинку из другой папки.
+        document.body.appendChild(img);
+        // строкой выше добавили картинку
+
+        setTimeout(() => {
+            document.body.removeChild(img);
+        }, 3000);
+        // тут скрипт удаляет картинку через 3 секунды
+
+        // Ниже добавим (Добавил Btn) или переделаем кнопку (старая осталась btn)
+        const Btn = document.createElement('button');
+        Btn.innerHTML = "Кнопка1";
+        Btn.classList.add('danger');
+        document.body.appendChild(Btn);
+
+        // после создания тега кнопки с классом и id btn-send
+        const btnSend = document.getElementById('btn-send'); /*выбрали кнопку по id*/ /*так же можно выбрать querySelector('#btn-send')   -  это универсальная функция и говорим что работаетм с id посредством #*/
+        btnSend.classList.add('success')  /*добавили стили по классу для этой кнопки*/
+        btnSend.innerHTML = 'Отправлено';  /*заменили текст на отправлено*/
+
+        // применение стиля к кнопке Отмена
+        const btnCancel = document.querySelector('.cancel');
+        btnCancel.classList.add('danger-inverse');
+
+
+
+        // const divButtons = document.querySelector('.buttons');
+        // const btn123 = document.createElement('button');
+        // btn123.innerHTML = "Кнопка123";
+        // btn123.classList.add('success');
+        // divButtons.appendChild(btn123);
+        // закомментил для того чтобы работал скрипт из части 3
+    </script>
+
+    <script>
+        // Часть 3    Чтоб зараотало надо закомментить из предыдущего скрипта дивбаттонс
+        const divButtons = document.querySelector('.buttonz');
+        const btnCreate = document.querySelector('.btn-create');
+        // строчку выше надо закоментить для части скрипта с виндов,Ю которую тоже ещё надо правильно составить
+        // let btnCreate;
+        btnCreate.addEventListener('click', () => {
+            const newButton = document.createElement("button");
+            newButton.classList.add('simple-button');
+            newButton.innerHTML = ("Новая кнопка");
+            divButtons.appendChild(newButton);
+        })
+
+
+        //Но эта хрень будет рабоать только если всё переиначить, муторно
+        // window.addEventListener('load', () => {
+        //     btnCreate = document.createElement('button')
+        //     btn.innerHTML = "Создать новую кнопку"
+        //     btn.classList.add('primary')
+        //     document.body.appendChild(btnCreate)
+
+        // })
+
+
+    </script>
+
+
+
+
+
+</body>
+
+</html>

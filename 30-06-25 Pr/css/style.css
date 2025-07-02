@@ -1,0 +1,75 @@
+:root {
+    --bg-color: white;
+    --contrast-color: darkgreen;
+    --font-color: #333;
+
+}
+
+.dark-theme {
+    --bg-color: #333;
+    --contrast-color: darkcyan;
+    --font-color: white;
+}
+
+body {
+    background: var(--bg-color);
+    margin: 8px;
+    font-family: sans-serif;
+}
+
+.accordeon {
+    border: 1px solid black;
+    max-width: 600px;
+}
+
+.accordeon-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background:
+        /* darkgreen*/
+        var(--contrast-color);
+    color: white;
+}
+
+.accordeon-btn {
+    border: none;
+    background: transparent;
+    /*Для того чтобы СВГ картинка отображалась надо указать ширину и высоту*/
+    width: 32px;
+    height: 32px;
+    transition: 0.5s;
+}
+
+.accordeon-btn-open {
+    transform: rotateZ(180deg);
+}
+
+.accordeon-body {
+    padding: 0px 20px;
+    /* display: none;  убираем чтобы сделать анимацию */
+    height: 0px;
+    transition: 0.5s;
+    overflow: hidden;
+    color:var(--font-color) /*цвет подстраивается в зависимости от темы*/
+}
+
+
+.accordeon-body-open {
+    /* display: block; тоже для плавности появления убираем*/
+    /* height: 120px; */
+    height: unset;
+    /*для корректного отображения*/
+    padding: 20px;
+}
+
+#change-theme {
+    margin: 20px 0px;
+    padding: 10px 20px;
+    background:
+        /* darkgreen*/
+        var(--contrast-color);
+    color: white;
+    cursor: pointer;
+}
