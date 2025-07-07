@@ -7,6 +7,7 @@ const img5 = document.querySelector("#img-5")
 const img6 = document.querySelector("#img-6")
 
 
+
 img1.addEventListener("click", ()=>{
 viewImg.src=img1.src
 })
