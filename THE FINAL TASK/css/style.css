@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Special+Gothic+Expanded+One&display=swap');
+
+:root {
+    --text-color: #b94a00;
+    --accent-color: #FBD784;
+    --bg-color: #000000;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+
+body {
+    color: var(--text-color);
+    margin: 0 auto;
+    background: var(--bg-color);
+    /* padding: 30px; */
+}
+
+a {
+    text-decoration: none;
+    color: var(--text-color)
+}
+
+header {
+    font-size: large;
+    font-weight: bold;
+    background: linear-gradient(#0000 70%, var(--bg-color)), url(../imgs/images/tricking-showact.jpg);
+    position: relative;
+    background-position: center top;
+    height: 100vh;
+    background-size: 80%;
+    background-repeat: no-repeat;
+}
+
+.header-navigations {
+    margin: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* position: sticky;
+    top: 0; */
+
+}
+
+
+
+.logotype {
+    font-family: "Special Gothic Expanded One", sans-serif;
+    font-size: 30px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.logo {
+    /* position: absolute; */
+    background: white;
+    border-radius: 50%;
+    width: 50px;
+    /* object-position: center; */
+    top: 0px;
+    left: 0px;
+    box-shadow: 0 0 20px black;
+    filter: invert(1);
+
+}
+
+/* .logo-shadow-circle {
+    top: 0px;
+    left: 0px;
+    /* object-position: center;
+
+    position: absolute;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    box-shadow: 0 0 10px 0px linear-gradient(208deg, rgba(0, 125, 11, 1) 0%, rgba(41, 45, 86, 1) 50%, rgba(163, 0, 0, 1) 100%)black;
+    box-shadow: 0 0 10px black;
+    animation: animate 1s linear infinite;
+} */
+
+
+
+/* 
+@keyframes animate {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}*/
+
+
+.nav {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    font-family: "Oswald", sans-serif;
+
+}
+
+.account {
+    font-family: "Oswald", sans-serif;
+    display: flex;
+    align-items: center;
+    /* background-color: rgb(109, 55, 55); */
+    cursor: pointer;
+}
+
+
+.more {
+    display: flex
+
+}

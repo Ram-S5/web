@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&amp;display=swap');
+
+:root {
+    --bg-color: #0B1D26;
+    --text-color: #fff;
+    --accent-color: #FBD784;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+
+body {
+    font-family: "Roboto", sans-serif;
+    font-size: 18px;
+    background: var(--bg-color);
+    color: var(--text-color);
+}
+
+a {
+    color: var(--text-color);
+    text-decoration: none;
+}
+
+a:hover {
+    color: var(--accent-color);
+}
+
+
+h1 {
+    font-size: 88px;
+    font-weight: 600;
+    line-height: 100px;
+}
+
+h2 {
+    font-size: 64px;
+    font-weight: 700;
+    line-height: 75px;
+}
+
+.accent-color {
+    color: var(--accent-color);
+}
+
+
+.header__navigation {
+    padding: 64px 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header__logo {
+    font-size: 32px;
+    font-weight: 900;
+    letter-spacing: 3px;
+}
+
+nav {
+    display: flex;
+    gap: 27px;
+}
+
+.header__account {
+    all: unset;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+}
+
+
+.header__hero {
+    max-width: 950px;
+    margin: 0 auto;
+    margin-top: 200px;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+.pre-header {
+    letter-spacing: 6px;
+    text-transform: uppercase;
+    font-weight: 900;
+    color: var(--accent-color);
+    display: flex;
+    gap: 32px;
+    align-items: center;
+
+}
+
+.pre-line {
+    display: inline-block;
+    width: 72px;
+    height: 8px;
+    background: var(--accent-color);
+}
+
+.header__social {
+    position: absolute;
+    top: 360px;
+    left: 80px;
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    /* flex-direction: column; */
+    /*не нужен*/
+    writing-mode: vertical-lr;
+}
+
+header {
+    height: 1700px;
+    background: linear-gradient(#0000 50%, var(--bg-color)), url(../images/bg-header.png);
+    background-position: center;
+    background-size: cover;
+    /* background-position: center top;     */
+    /*по Х и по Y, либо с нулями от левого верхнего угла*/
+}
+
+.guide-trails{
+    display: flex;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.guide-trails__header{
+    display: flex;
+    flex-direction: column;
+    gap: 23px;
+    margin-bottom: 56px;
+    
+}
