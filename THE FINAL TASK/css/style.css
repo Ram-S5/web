@@ -24,23 +24,30 @@ a {
 }
 
 header {
+    margin: 0 auto;
     font-size: large;
     font-weight: bold;
-    background: linear-gradient(#0000 70%, var(--bg-color)), url(../imgs/images/tricking-showact.jpg);
+    /* background: linear-gradient(#0000 70%, var(--bg-color)), url(../imgs/images/tricking-showact.jpg) center/cover; */
+    background: radial-gradient(circle, rgba(255, 255, 255, 0) 0%, var(--bg-color) 100%), url(../imgs/images/tricking-showact.jpg);
     position: relative;
-    background-position: center top;
-    height: 100vh;
-    background-size: 80%;
+    /* top: 0; */
+    background-position: center;
+    height: 1080px;
+    background-size: cover;
     background-repeat: no-repeat;
+    /* background-attachment: fixed; */
 }
 
 .header-navigations {
-    margin: 20px;
+    padding: 20px;
+    /* height: 50px; */
+    width: 100%;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    /* position: sticky;
-    top: 0; */
+    /* position: fixed; */
+    /* top: 0; */
+    background: linear-gradient(0deg, rgba(34, 193, 195, 0) 0%, rgba(0, 0, 0, 0.78) 10%, rgba(0, 0, 0, 1) 40%);
 
 }
 
@@ -64,6 +71,7 @@ header {
     left: 0px;
     box-shadow: 0 0 20px black;
     filter: invert(1);
+    /* animation: animate 5s linear infinite; */
 
 }
 
@@ -83,8 +91,8 @@ header {
 
 
 
-/* 
-@keyframes animate {
+
+/* @keyframes animate {
     0% {
         transform: rotate(0deg);
     }
@@ -92,7 +100,7 @@ header {
     100% {
         transform: rotate(360deg);
     }
-}*/
+} */
 
 
 .nav {
@@ -111,8 +119,16 @@ header {
     cursor: pointer;
 }
 
+.header-hero {
+    width: 500px;
+    position: relative;
+    font-size: 50px;
+    font-family: "Oswald", sans-serif;
+    text-transform: uppercase;
+    margin: 500px auto auto 750px;
+    /* align-items: center; */
+}
 
 .more {
     display: flex
-
 }
