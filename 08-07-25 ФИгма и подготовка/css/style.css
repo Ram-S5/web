@@ -120,17 +120,132 @@ header {
     /*по Х и по Y, либо с нулями от левого верхнего угла*/
 }
 
-.guide-trails{
+.guide-trails {
     display: flex;
     justify-content: space-between;
     max-width: 1200px;
     margin: 0 auto;
 }
 
-.guide-trails__header{
+.guide-trails__header,
+.our-services__header {
     display: flex;
     flex-direction: column;
     gap: 23px;
-    margin-bottom: 56px;
-    
+    /* margin-bottom: 56px; */
+
+}
+
+.guide__cards {
+    display: flex;
+    gap: 48px;
+}
+
+.guide__card {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    width: 278px;
+}
+
+.guide__card figure {
+    display: flex;
+    gap: 18px;
+    align-items: center;
+}
+
+.guide__card figcaption {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.guide__card__name {
+    font-size: 22px;
+    font-weight: 500;
+}
+
+.guide__card__job {
+    font-size: 20px;
+    opacity: 0.44;
+}
+
+.guide-trails__trails,
+.guide-trails__guide {
+    display: flex;
+    flex-direction: column;
+    gap: 56px;
+}
+
+/* .trails__info {
+    margin-top: 56px;
+} */
+
+.trails__info {
+    display: flex;
+    gap: 47px;
+}
+
+.trails__title {
+    font-weight: 500;
+}
+
+.trails__about {
+    font-weight: 300;
+    opacity: 0.44;
+}
+
+.trails__info div {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.guide-trails__trails {
+    width: 455px;
+    font-size: 16px;
+}
+
+.our-services {
+    max-width: 641px;
+    margin: 0 auto;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+
+.our-services__header {
+    align-items: center;
+}
+
+.service__cards {
+    display: flex;
+    justify-content: center;
+    gap: 190px;
+}
+
+.service__card {
+    text-align: center;
+    color: var(--accent-color);
+    font-weight: 900;
+    font-size: 22px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 50px;
+
+}
+
+.service__card img {
+    border: 3px dashed var(--accent-color);
+    border-radius: 50%;
+    padding: 10px;
+    /*для отведения границы бордера*/
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    gap: 100px;
 }
