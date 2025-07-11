@@ -10,12 +10,12 @@
     box-sizing: border-box;
 }
 
-
 body {
     color: var(--text-color);
     margin: 0px auto;
     background: var(--bg-color);
     /* padding: 30px; */
+    max-width: 1440px;
 }
 
 a {
@@ -53,8 +53,6 @@ header {
 
 }
 
-
-
 .logotype {
     font-family: "Special Gothic Expanded One", sans-serif;
     font-size: 30px;
@@ -63,11 +61,13 @@ header {
     gap: 20px;
 }
 
-h2, .logotype p, header a{
+h2,
+.logotype p,
+header a {
     color: var(--accent-color)
 }
 
-.logotype span{
+.logotype span {
     color: var(--text-color)
 }
 
@@ -81,7 +81,7 @@ h2, .logotype p, header a{
     left: 0px;
     box-shadow: 0 0 20px rgb(0, 0, 0);
     filter: invert(1);
-    animation: animate 5s linear infinite;
+    /* animation: animate 5s linear infinite; */
 
 }
 
@@ -99,10 +99,7 @@ h2, .logotype p, header a{
     animation: animate 1s linear infinite;
 } */
 
-
-
-
-@keyframes animate {
+/* @keyframes animate {
     0% {
         transform: rotate(0deg);
     }
@@ -110,7 +107,7 @@ h2, .logotype p, header a{
     100% {
         transform: rotate(360deg);
     }
-}
+} */
 
 .header-nav {
     width: 55%;
@@ -125,14 +122,11 @@ h2, .logotype p, header a{
     /* justify-content:center */
     gap: 20px;
     font-family: "Oswald", sans-serif;
-    }
+}
 
-    li:first-child{
-        display: none;
-    }
-
-
-
+/* li:first-child {
+    display: none;
+} */
 
 .account {
     font-family: "Oswald", sans-serif;
@@ -152,8 +146,6 @@ h2, .logotype p, header a{
     object-position: center;
     z-index: 10;
     /* color: aliceblue; */
-
-
 }
 
 /* .header-hero { */
@@ -260,7 +252,8 @@ h2, .logotype p, header a{
         align-items: flex-start;
         gap: 40px;
     }
-    li:first-child{
+
+    li:first-child {
         display: block;
     }
 
