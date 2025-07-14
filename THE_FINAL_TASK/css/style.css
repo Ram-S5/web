@@ -42,30 +42,14 @@ header {
 }
 
 .hero {
-    width: 100vw;
-    /* height: 1080px; */
-    background: url(../imgs/images/tricking-showact.jpg);
-    /* height: 100vh; */
-    /* position: relative; */
-    /* top: 0; */
-    /* background-attachment: fixed; */
-    /* position: absolute;
-
-    width: 800px;
-    font-family: var(--font-hero);
-    font-size: 60px; */
-
-    background-image: radial-gradient(circle, rgba(255, 255, 255, 0) 0%, var(--bg-color) 100%), url(../imgs/images/tricking-showact.jpg) center center / cover no-repeat var(--bg-color);
-    --section-background-repeat: no-repeat;
-    --section-background-position: center center;
-    --section-background-size: cover;
+    background: linear-gradient(rgba(42, 26, 31, 0.7), rgba(42, 26, 31, 0.7)), url(../images/breaking_powermove.jpg) no-repeat center center/cover;
+   background-attachment: fixed;
+    height: 100vh;
+    color: var(--white-color);
+    display: flex;
+    align-items: center;
+    text-align: center;
     padding-top: 80px;
-    padding-bottom: 80px;
-    --light_opacity: 0.75;
-    --light_color: #ffffff;
-    --light_bg: #212121;
-    --light_radius: 0;
-    --light_padding: 20px;
 }
 
 
