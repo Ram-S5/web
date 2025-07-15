@@ -1,0 +1,758 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Roboto:ital,wght@0,100..900;1,100..900&family=Rubik+Doodle+Shadow&family=Special+Gothic+Expanded+One&display=swap');
+
+:root {
+    --accent-color: rgb(255, 84, 48);
+    --text-color: #ffffff;
+    --bg-color: #000000;
+    --font-accent: "Special Gothic Expanded One", sans-serif;
+    --font-normal: "Oswald", sans-serif;
+    --font-hero: "Roboto", Arial, sans-serif;
+    --font-headline: "Rubik Doodle Shadow", system-ui;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    color: var(--text-color)
+}
+
+.logotype p,
+header a,
+.hero h1 {
+    color: var(--accent-color)
+}
+
+.logotype span,
+.hero span {
+    color: var(--text-color)
+}
+
+.hero h1 {
+    font-family: var(--font-hero);
+    font-weight: 900;
+    text-shadow:
+        1px 1px 2px var(--bg-color),
+        0 0 1em var(--bg-color),
+        0 0 0.2em;
+}
+
+.headline2 {
+    margin: 0 auto;
+    width: max-content;
+    color: var(--accent-color);
+    font-size: 50px;
+    font-family: var(--font-headline);
+    letter-spacing: 10px;
+    font-weight: 900;
+    margin-bottom: 80px;
+    border: 5px solid var(--accent-color);
+    border-style: solid none solid none;
+}
+
+.headline3 {
+    font-size: 36px;
+    font-family: var(--font-accent);
+    color: var(--accent-color);
+    font-weight: 600;
+    letter-spacing: 10px;
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+
+.headline4 {
+    font-family: var(--font-normal);
+    font-size: 32px;
+    font-weight: 600;
+    margin-top: 30px;
+    margin-bottom: 40px;
+    text-decoration: underline;
+}
+
+.simple-text,
+.instructor-job,
+.instructor-card q,
+a,
+.account,
+.contacts-address p,
+footer h5,
+footer h2,
+footer p {
+    font-size: 20px;
+    font-family: var(--font-normal);
+}
+
+.font-style-text {
+    font-family: "Oswald", sans-serif;
+    font-size: 22px;
+    text-align: justify;
+}
+
+body {
+    line-height: 1.5;
+    color: var(--text-color);
+
+    background-color: #000000;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0) 0%, var(--bg-color) 100%), url(../imgs/images/tricking-showact.jpg);
+    background-size: cover;
+    background-position-x: center;
+    background-position-y: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+
+
+
+.sec-container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.padding-top {
+    padding-top: 110px;
+}
+
+
+/*-----Хэдер-----*/
+header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: auto;
+    z-index: 1000;
+
+    /* background: #636363; */
+    background: linear-gradient(0deg, rgb(0 0 0 / 12%) 0%, rgb(0 0 0 / 61%) 10%, rgb(0 0 0 / 92%) 25%, rgb(0 0 0) 100%);
+    /* background: linear-gradient(0deg, rgba(99, 99, 99, 0.52) 0%, rgba(61, 61, 61, 0.9) 10%, rgba(31, 31, 31, 0.97) 25%, rgba(0, 0, 0, 1) 100%); */
+}
+
+.header-container {
+    padding: 0 40px;
+}
+
+.header-navigations {
+    padding: 30px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logotype {
+    font-family: var(--font-accent);
+    font-size: 30px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    vertical-align: middle;
+}
+
+.logotype,
+.links {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.logo {
+    vertical-align: middle;
+    filter: brightness(10);
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    box-shadow: 0 0 20px var(--text-color);
+}
+
+.account {
+    display: flex;
+    gap: 10px;
+
+}
+
+.account img {
+    width: 30px;
+    height: 30px;
+}
+
+.account span {
+    vertical-align: middle;
+    cursor: pointer;
+}
+
+
+
+#burger-menu {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 60%;
+}
+
+#burger-menu button {
+    display: none;
+}
+
+
+#burger-btn {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    z-index: 1001;
+    border-radius: 50%;
+    box-shadow: 0 0 20px var(--text-color);
+}
+
+.menu-burger__line {
+    display: block;
+    width: 25px;
+    height: 2px;
+    background-color: var(--text-color);
+    margin: 5px 0;
+    transition: var(--transition);
+}
+
+@media screen and (max-width: 920px) {
+
+    #burger-menu {
+        overflow: hidden;
+        height: 100vh;
+        width: 250px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+        position: fixed;
+        top: 0;
+        background: #000000f1;
+        box-shadow: 8px 0px 8px 0px rgba(255, 255, 255, 0.2);
+        transition: 1s;
+        left: -400px;
+    }
+
+    .links {
+        border-color: 1px solid red;
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        justify-content: space-between;
+
+        gap: 50px;
+    }
+
+
+
+    #burger-btn {
+        display: block;
+    }
+
+    #burger-menu a {
+        padding: 10px 35px;
+        align-items: center;
+        text-decoration: none;
+        color: var(--accent-color);
+        transition: 1s;
+        width: 100%;
+    }
+
+    #burger-menu a:hover {
+        color: wheat;
+        text-decoration: underline;
+    }
+
+    #burger-btn-menu-close {
+        position: absolute;
+        bottom: 20px;
+    }
+
+    #burger-menu button {
+        display: block;
+        margin: 0 auto;
+        padding: 10px 30px;
+        background: var(--accent-color);
+        color: wheat;
+        border-radius: 5px;
+        border-radius: 50px;
+    }
+
+    .account {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        cursor: pointer;
+    }
+
+    .account img {
+        width: 50px;
+        height: 50px;
+    }
+
+}
+
+
+/*-----Мэйн-----*/
+main {
+    text-align: center;
+}
+
+.main-bord {
+    max-width: 1200px;
+    margin: 0 auto;
+    background: rgba(150, 150, 150, 0.2);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(5.6px) saturate(100%);
+    border: 1px solid rgba(235, 235, 235, 0.2);
+    border-radius: 15px;
+    padding: 0px 50px;
+}
+
+/*-Секция "Герой"-*/
+.hero {
+    /* background: radial-gradient(circle, rgba(255, 255, 255, 0) 0%, var(--bg-color) 100%), url(../imgs/images/tricking-showact.jpg);
+    background-size: contain;
+    background-position-x: center;
+    background-position-y: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;*/
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    /* margin-top:200px ; */
+    /* padding-top: 100px; */
+    z-index: 10;
+}
+
+.hero-container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.hero h1 {
+    font-size: 3.5rem;
+    margin-bottom: 20px;
+    line-height: 1.2;
+}
+
+.hero p {
+    font-family: var(--font-hero);
+    font-weight: 400;
+    font-size: 1.5rem;
+    margin-bottom: 30px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.head-arrow {
+    position: absolute;
+    bottom: 10px;
+
+}
+
+.hero button {
+    font-family: var(--font-normal);
+    background: var(--accent-color);
+    color: var(--text-color);
+    border: none;
+    border-radius: 5px;
+
+}
+
+
+
+/*-Секция "О Нас"-*/
+.about-us-container {
+    margin: 0 auto;
+    max-width: 1000px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+}
+
+
+/*-Секция "Направления"-*/
+.dir-card-element {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.direction-cards {
+    width: 100%;
+    height: 500px;
+    display: flex;
+    overflow: hidden;
+    gap: 20%;
+}
+
+.direction-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 50px;
+    min-width: 100%;
+    position: relative;
+    transition: 1s;
+}
+
+.dir-card-element img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 30px;
+    filter: grayscale(1);
+}
+
+.dir-card-element a {
+    color: var(--accent-color);
+    padding: 20px;
+}
+
+.card-element-text {
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 20px;
+}
+
+/*Кнопки слайдера*/
+.buttons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+.buttons button {
+    width: 50px;
+    height: 10px;
+    border-radius: 10px;
+    margin: 15px 5px;
+    cursor: pointer;
+}
+
+.buttons button:hover {
+    border: 2px solid var(--bg-color);
+    box-shadow: 0 0 10px var(--accent-color);
+}
+
+
+/*-Секция "Инструкторский состав"-*/
+
+
+/* .instructors {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+} */
+
+.instructor-cards {
+    /* width: 100%; */
+    display: flex;
+    justify-content: space-evenly;
+    /* gap: 50px; */
+}
+
+.instructor-description img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+
+
+.instructor-name {
+    width: 250px;
+    margin: 0 auto;
+    font-size: 26px;
+    font-weight: 900;
+    font-style: italic;
+    border-bottom: 1px solid var(--accent-color);
+}
+
+.instructor-card>q {
+    background-color: var(--accent-color);
+    color: var(--bg-color);
+}
+
+.instructors-text {
+    border-top: 1px solid var(--text-color);
+    border-bottom: 1px solid var(--text-color);
+    margin: 20px 0;
+    padding: 20px;
+}
+
+
+
+/*-Секция "Информация"-*/
+.contacts-address {
+    margin-bottom: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.mail-numbers-address {
+    /* width: 1000px; */
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    /* justify-content: space-between; */
+    align-items: center;
+    gap: 20px;
+}
+
+
+.information {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+/*-----ФУТЕР------*/
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 40px;
+}
+
+.footer-logo {
+    height: 300px;
+    background-color: radial-gradient(circle, rgba(0, 0, 0, 1) 67%, rgba(0, 0, 0, 0.8) 85%, rgba(92, 0, 0, 0) 100%);
+    background-image: url(../imgs/logo.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 40px;
+    font-family: var(--font-accent);
+    color: var(--accent-color);
+}
+
+.footer-logo span {
+    color: var(--text-color);
+}
+
+.btn-style {
+    font-family: var(--font-normal);
+    background: var(--accent-color);
+}
+
+.footer-icons {
+    display: flex;
+    gap: 20px;
+}
+
+.footer-icons img {
+    filter: invert(1);
+    width: 30px;
+    height: 30px;
+}
+
+
+
+
+
+/*=====Медиазапросы=====*/
+
+
+@media (min-width: 800px) and (max-width: 1200px) {
+
+    .logo-text {
+        font-size: 22px;
+    }
+
+    .headline2 {
+        font-size: 24px;
+        letter-spacing: 1px;
+        margin-bottom: 10px;
+    }
+
+    .headline3,
+    .headline4 {
+        font-size: 20px;
+        letter-spacing: 2px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+
+    .font-style-text {
+        font-size: 18px;
+        text-align: justify;
+    }
+
+    footer {
+        padding: 0 40px;
+    }
+
+    main {
+        margin: 0 40px;
+    }
+
+    .main-bord {
+        padding: 0px 20px;
+    }
+
+    .card-element-gif {
+        height: 70%;
+    }
+
+    .buttons {
+        margin: 0;
+    }
+
+}
+
+
+@media screen and (min-width: 375px) and (max-width: 800px) {
+    .logo-text {
+        font-size: 22px;
+    }
+
+    .headline2 {
+        font-size: 24px;
+        letter-spacing: 1px;
+    }
+
+
+
+    .headline3,
+    .headline4 {
+        font-size: 20px;
+        letter-spacing: 2px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+
+
+    .font-style-text {
+        font-size: 18px;
+        text-align: justify;
+    }
+
+    .main-bord {
+        margin: 0 20px;
+        padding: 0px 20px;
+    }
+
+    .mail-numbers-address {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .sec-container {
+        padding: 0 20px;
+    }
+
+    .direction-cards {
+        height: max-content
+    }
+
+    .direction-card {
+        flex-direction: column;
+    }
+
+    .dir-card-element {
+        margin: 0 auto;
+        width: 100%;
+    }
+
+    .dir-card-element img {
+        width: 100%;
+        overflow: hidden;
+    }
+
+    .card-element-text {
+        height: max-content;
+
+    }
+
+}
+
+
+@media (max-width: 375px) {
+
+    .logo-text {
+        font-size: 16px;
+    }
+
+    .headline2 {
+        font-size: 22px;
+        letter-spacing: 1px;
+        margin-bottom: 10px;
+    }
+
+    .headline3,
+    .headline4 {
+        font-size: 20px;
+        letter-spacing: 2px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+
+    .font-style-text {
+        font-size: 16px;
+        text-align: justify;
+    }
+
+    .main-bord {
+        padding: 0px 20px;
+    }
+
+    .mail-numbers-address {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .sec-container {
+        padding: 0 20px;
+    }
+
+    .direction-cards {
+        height: max-content
+    }
+
+    .direction-card {
+        flex-direction: column;
+    }
+
+    .dir-card-element {
+        width: 100%;
+        aspect-ratio: 1/1;
+        overflow: hidden;
+    }
+
+    .dir-card-element img {
+        width: 100%;
+    }
+
+    .card-element-text {
+        padding: 0;
+        padding-bottom: 100px;
+    }
+
+    .sec-container {
+        flex-direction: column;
+        align-items: center;
+    }
+}

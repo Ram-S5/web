@@ -47,7 +47,6 @@ header a,
     font-family: var(--font-headline);
     letter-spacing: 10px;
     font-weight: 900;
-    /* margin-top: 100px; */
     margin-bottom: 80px;
     border: 5px solid var(--accent-color);
     border-style: solid none solid none;
@@ -210,7 +209,6 @@ header {
 }
 
 .menu-burger__line {
-    vertical-align: middle;
     display: block;
     width: 25px;
     height: 2px;
@@ -219,11 +217,8 @@ header {
     transition: var(--transition);
 }
 
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 920px) {
 
-    /* .header-nav, .account{
-       display: none;
-   }  */
     #burger-menu {
         overflow: hidden;
         height: 100vh;
@@ -237,9 +232,7 @@ header {
         background: #000000f1;
         box-shadow: 8px 0px 8px 0px rgba(255, 255, 255, 0.2);
         transition: 1s;
-        /* right: 0px; */
         left: -400px;
-        /*Сюда тоже можно, но у меня прописано в html*/
     }
 
     .links {
@@ -268,7 +261,6 @@ header {
     }
 
     #burger-menu a:hover {
-        /* background: rgb(77, 13, 150); */
         color: wheat;
         text-decoration: underline;
     }
@@ -365,14 +357,19 @@ main {
 }
 
 .head-arrow {
-    /* width: 50px; */
-    /* height: 50px; */
     position: absolute;
     bottom: 10px;
 
 }
 
+.hero button {
+    font-family: var(--font-normal);
+    background: var(--accent-color);
+    color: var(--text-color);
+    border: none;
+    border-radius: 5px;
 
+}
 
 
 
@@ -501,22 +498,6 @@ main {
     padding: 20px;
 }
 
-/* 
-    border-top: 1px solid var(--text-color);
-    border-bottom: 1px solid var(--text-color);
-    padding: 20px auto;
-    margin: 20px auto; */
-
-/* .container {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
-    margin-bottom: 50px;
-} */
-
-
-
 
 
 /*-Секция "Информация"-*/
@@ -547,21 +528,16 @@ main {
 
 /*-----ФУТЕР------*/
 
-footer {
+.footer-container {
     max-width: 1200px;
     margin: 0 auto;
-    /* background-color: var(--bg-color); */
-    /* position: relative; */
-    /* height: 10vh; */
+    padding: 0 40px;
 }
 
 .footer-logo {
-
-    /* width: 300px; */
     height: 300px;
     background-color: radial-gradient(circle, rgba(0, 0, 0, 1) 67%, rgba(0, 0, 0, 0.8) 85%, rgba(92, 0, 0, 0) 100%);
     background-image: url(../imgs/logo.png);
-    /* filter: brightness(5); */
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -578,7 +554,13 @@ footer {
 }
 
 .btn-style {
+    font-family: var(--font-normal);
     background: var(--accent-color);
+}
+
+.footer-icons {
+    display: flex;
+    gap: 20px;
 }
 
 .footer-icons img {
@@ -606,8 +588,6 @@ footer {
         margin-bottom: 10px;
     }
 
-
-
     .headline3,
     .headline4 {
         font-size: 20px;
@@ -616,15 +596,13 @@ footer {
         margin-bottom: 10px;
     }
 
-
     .font-style-text {
         font-size: 18px;
         text-align: justify;
     }
 
-
-    body {
-        /* padding: 0 20px; */
+    footer {
+        padding: 0 40px;
     }
 
     main {
@@ -636,20 +614,14 @@ footer {
     }
 
     .card-element-gif {
-        /* aspect-ratio: 1/1; */
         height: 70%;
     }
 
     .buttons {
-
         margin: 0;
     }
 
-
-
 }
-
-
 
 
 @media screen and (min-width: 375px) and (max-width: 800px) {
@@ -678,17 +650,10 @@ footer {
         text-align: justify;
     }
 
-
-    body {
-        /* padding: 0 10px; */
-    }
-
     .main-bord {
         margin: 0 20px;
         padding: 0px 20px;
     }
-
-
 
     .mail-numbers-address {
         flex-direction: column;
@@ -710,10 +675,7 @@ footer {
     .dir-card-element {
         margin: 0 auto;
         width: 100%;
-
     }
-
-    .card-element-gif {}
 
     .dir-card-element img {
         width: 100%;
@@ -740,7 +702,6 @@ footer {
         margin-bottom: 10px;
     }
 
-
     .headline3,
     .headline4 {
         font-size: 20px;
@@ -754,13 +715,7 @@ footer {
         text-align: justify;
     }
 
-    body {
-        /* padding: 0 10px; */
-    }
-
-
     .main-bord {
-
         padding: 0px 20px;
     }
 
@@ -800,5 +755,4 @@ footer {
         flex-direction: column;
         align-items: center;
     }
-
 }
