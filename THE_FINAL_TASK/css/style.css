@@ -88,6 +88,7 @@ footer p {
 .font-style-text {
     font-family: "Oswald", sans-serif;
     font-size: 22px;
+    text-align: justify;
 }
 
 body {
@@ -123,14 +124,17 @@ header {
     position: fixed;
     width: 100%;
     top: 0;
-    /* left: auto; */
+    left: auto;
     z-index: 1000;
 
-    background: #636363;
+    /* background: #636363; */
     background: linear-gradient(0deg, rgb(0 0 0 / 12%) 0%, rgb(0 0 0 / 61%) 10%, rgb(0 0 0 / 92%) 25%, rgb(0 0 0) 100%);
     /* background: linear-gradient(0deg, rgba(99, 99, 99, 0.52) 0%, rgba(61, 61, 61, 0.9) 10%, rgba(31, 31, 31, 0.97) 25%, rgba(0, 0, 0, 1) 100%); */
 }
 
+.header-container {
+    padding: 0 40px;
+}
 
 .header-navigations {
     padding: 30px 0;
@@ -182,7 +186,121 @@ header {
 
 
 
+#burger-menu {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 60%;
+}
 
+#burger-menu button {
+    display: none;
+}
+
+
+#burger-btn {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    z-index: 1001;
+    border-radius: 50%;
+    box-shadow: 0 0 20px var(--text-color);
+}
+
+.menu-burger__line {
+    vertical-align: middle;
+    display: block;
+    width: 25px;
+    height: 2px;
+    background-color: var(--text-color);
+    margin: 5px 0;
+    transition: var(--transition);
+}
+
+@media screen and (max-width: 900px) {
+
+    /* .header-nav, .account{
+       display: none;
+   }  */
+    #burger-menu {
+        overflow: hidden;
+        height: 100vh;
+        width: 250px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+        position: fixed;
+        top: 0;
+        background: #000000f1;
+        box-shadow: 8px 0px 8px 0px rgba(255, 255, 255, 0.2);
+        transition: 1s;
+        /* right: 0px; */
+        left: -400px;
+        /*Сюда тоже можно, но у меня прописано в html*/
+    }
+
+    .links {
+        border-color: 1px solid red;
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        justify-content: space-between;
+
+        gap: 50px;
+    }
+
+
+
+    #burger-btn {
+        display: block;
+    }
+
+    #burger-menu a {
+        padding: 10px 35px;
+        align-items: center;
+        text-decoration: none;
+        color: var(--accent-color);
+        transition: 1s;
+        width: 100%;
+    }
+
+    #burger-menu a:hover {
+        /* background: rgb(77, 13, 150); */
+        color: wheat;
+        text-decoration: underline;
+    }
+
+    #burger-btn-menu-close {
+        position: absolute;
+        bottom: 20px;
+    }
+
+    #burger-menu button {
+        display: block;
+        margin: 0 auto;
+        padding: 10px 30px;
+        background: var(--accent-color);
+        color: wheat;
+        border-radius: 5px;
+        border-radius: 50px;
+    }
+
+    .account {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        cursor: pointer;
+    }
+
+    .account img {
+        width: 50px;
+        height: 50px;
+    }
+
+}
 
 
 /*-----Мэйн-----*/
@@ -289,6 +407,7 @@ main {
 .direction-card {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     gap: 50px;
     min-width: 100%;
     position: relative;
@@ -310,7 +429,7 @@ main {
 
 .card-element-text {
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-evenly;
     padding: 20px;
 }
 
@@ -346,7 +465,7 @@ main {
 } */
 
 .instructor-cards {
-    width: 100%;
+    /* width: 100%; */
     display: flex;
     justify-content: space-evenly;
     /* gap: 50px; */
@@ -432,16 +551,16 @@ footer {
     max-width: 1200px;
     margin: 0 auto;
     /* background-color: var(--bg-color); */
-    position: relative;
+    /* position: relative; */
     /* height: 10vh; */
 }
 
 .footer-logo {
 
-    width: 300px;
+    /* width: 300px; */
     height: 300px;
-    background-color: radial-gradient(circle,rgba(0, 0, 0, 1) 67%, rgba(0, 0, 0, 0.8) 85%, rgba(92, 0, 0, 0) 100%);
-    background-image:url(../imgs/logo.png) ;
+    background-color: radial-gradient(circle, rgba(0, 0, 0, 1) 67%, rgba(0, 0, 0, 0.8) 85%, rgba(92, 0, 0, 0) 100%);
+    background-image: url(../imgs/logo.png);
     /* filter: brightness(5); */
     background-position: center;
     background-repeat: no-repeat;
@@ -470,15 +589,155 @@ footer {
 
 
 
+
+
 /*=====Медиазапросы=====*/
 
-/* (min-width:354px ) and */
+
+@media (min-width: 800px) and (max-width: 1200px) {
+
+    .logo-text {
+        font-size: 22px;
+    }
+
+    .headline2 {
+        font-size: 24px;
+        letter-spacing: 1px;
+        margin-bottom: 10px;
+    }
+
+
+
+    .headline3,
+    .headline4 {
+        font-size: 20px;
+        letter-spacing: 2px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+
+
+    .font-style-text {
+        font-size: 18px;
+        text-align: justify;
+    }
+
+
+    body {
+        /* padding: 0 20px; */
+    }
+
+    main {
+        margin: 0 40px;
+    }
+
+    .main-bord {
+        padding: 0px 20px;
+    }
+
+    .card-element-gif {
+        /* aspect-ratio: 1/1; */
+        height: 70%;
+    }
+
+    .buttons {
+
+        margin: 0;
+    }
+
+
+
+}
+
+
+
+
+@media screen and (min-width: 375px) and (max-width: 800px) {
+    .logo-text {
+        font-size: 22px;
+    }
+
+    .headline2 {
+        font-size: 24px;
+        letter-spacing: 1px;
+    }
+
+
+
+    .headline3,
+    .headline4 {
+        font-size: 20px;
+        letter-spacing: 2px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+
+
+    .font-style-text {
+        font-size: 18px;
+        text-align: justify;
+    }
+
+
+    body {
+        /* padding: 0 10px; */
+    }
+
+    .main-bord {
+        margin: 0 20px;
+        padding: 0px 20px;
+    }
+
+
+
+    .mail-numbers-address {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .sec-container {
+        padding: 0 20px;
+    }
+
+    .direction-cards {
+        height: max-content
+    }
+
+    .direction-card {
+        flex-direction: column;
+    }
+
+    .dir-card-element {
+        margin: 0 auto;
+        width: 100%;
+
+    }
+
+    .card-element-gif {}
+
+    .dir-card-element img {
+        width: 100%;
+        overflow: hidden;
+    }
+
+    .card-element-text {
+        height: max-content;
+
+    }
+
+}
+
 
 @media (max-width: 375px) {
 
+    .logo-text {
+        font-size: 16px;
+    }
+
     .headline2 {
-        font-size: 1.5rem;
+        font-size: 22px;
         letter-spacing: 1px;
+        margin-bottom: 10px;
     }
 
 
@@ -491,11 +750,18 @@ footer {
     }
 
     .font-style-text {
-        font-size: 18px;
+        font-size: 16px;
+        text-align: justify;
     }
 
+    body {
+        /* padding: 0 10px; */
+    }
+
+
     .main-bord {
-        padding: 0px 10px;
+
+        padding: 0px 20px;
     }
 
     .mail-numbers-address {
@@ -504,27 +770,35 @@ footer {
     }
 
     .sec-container {
-        padding: 0;
+        padding: 0 20px;
     }
 
-    .direction-cards{
+    .direction-cards {
         height: max-content
     }
+
     .direction-card {
         flex-direction: column;
-           }
+    }
 
     .dir-card-element {
         width: 100%;
+        aspect-ratio: 1/1;
+        overflow: hidden;
     }
 
     .dir-card-element img {
-        aspect-ratio: 1/1
+        width: 100%;
     }
 
-.dir-card-element-text{
-    height: max-content;
-}
+    .card-element-text {
+        padding: 0;
+        padding-bottom: 100px;
+    }
 
+    .sec-container {
+        flex-direction: column;
+        align-items: center;
+    }
 
 }

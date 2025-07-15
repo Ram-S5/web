@@ -14,9 +14,9 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 
-<body>
+<body class="">
     <header class="header">
-        <div class="header-navigations-container sec-container ">
+        <div class="header-navigations-container header-container ">
             <div class="header-navigations">
                 <a class="logotype" href="../index.html">
                     <div>
@@ -25,24 +25,29 @@
                     <p class="logo-text">Sport<span>Art</span></p>
                 </a>
 
-                <nav class="header-nav d-none d-md-block">
-                    <ul class="links">
-                        <li><a href="#about-us">О нас</a></li>
-                        <li><a href="#directions">Направления</a></li>
-                        <li><a href="#instructors">Инструкторы</a></li>
-                        <li><a href="#info">Информация</a></li>
-                    </ul>
-                </nav>
+                <div id="burger-menu">
+                    <nav class="header-nav">
+                        <ul class="links">
+                            <li><a href="#about-us">О нас</a></li>
+                            <li><a href="#directions">Направления</a></li>
+                            <li><a href="#instructors">Инструкторы</a></li>
+                            <li><a href="#info">Информация</a></li>
+                        </ul>
+                    </nav>
 
-                <div class="account d-none d-md-block">
+                    <div class="account">
 
-                    <img src="imgs/icons/account.svg" alt="">
+                        <img src="imgs/icons/account.svg" alt="">
 
-                    <!-- <div> -->
-                    <span>
-                        Аккаунт
-                    </span>
-                    <!-- </div> -->
+                        <!-- <div> -->
+                        <span>
+                            Аккаунт
+                        </span>
+                        <!-- </div> -->
+                    </div>
+
+                    <button id="burger-btn-menu-close">Close</button>
+
                 </div>
                 <!-- <div class="burger-btn d-block d-md-none">
                     <i class="fa fa-bars" aria-hidden="true"></i>
@@ -51,13 +56,19 @@
                     <input type="checkbox" id="burger-checkbox" class="burger-checkbox">
                     <label class="burger burger-btn-menu" for="burger-checkbox"></label>
                 </div> -->
+
+                <button id="burger-btn" class="menu-toggle">
+                    <div class="menu-burger__line"></div>
+                    <div class="menu-burger__line"></div>
+                    <div class="menu-burger__line"></div>
+                </button>
             </div>
         </div>
     </header>
 
     <main>
         <section class="hero">
-            <div class="hero-container sec-container">
+            <div class="hero-container" id="burger-btn-menu">
                 <h1>Sport<span>Art</span></h1>
 
                 <!-- <div class="hero-text"> -->
@@ -119,7 +130,7 @@
                         Мы сотрудничаем с представителями ивент-компаний, модельного бизнеса, музыкальными студиями и
                         театральными мастерскими. </p>
                     <p class="font-style-text">
-                        Знаем как удивить и помочь в освоении новой дистцыплины. </p>
+                        Знаем как удивить и помочь в освоении новой дисциплины. </p>
                 </div>
             </section>
 
@@ -128,7 +139,7 @@
                     <h2 class="headline2">Направления</h2>
                     <div class="direction-cards">
                         <figure class="direction-card" style="left: 0%;">
-                            <div class="dir-card-element">
+                            <div class="dir-card-element card-element-gif">
                                 <img src="imgs/gifs/tricking/triking-cheatg.gif" alt="">
                             </div>
                             <figcaption class="dir-card-element card-element-text">
@@ -153,7 +164,7 @@
                             </figcaption>
                         </figure>
                         <figure class="direction-card direction-card-revers" style="left: 0%">
-                            <div class="dir-card-element">
+                            <div class="dir-card-element card-element-gif">
                                 <img src="imgs/gifs/capoeira/capoeira2.gif" alt="">
                             </div>
                             <figcaption class="dir-card-element card-element-text">
@@ -178,8 +189,8 @@
                             </figcaption>
                         </figure>
                         <figure class="direction-card" style="left: 0%">
-                            <div class="dir-card-element">
-                                <img class="dir-card-element" src="imgs/gifs/breaking/bd-twist-2000.gif" alt="">
+                            <div class="dir-card-element card-element-gif">
+                                <img src="imgs/gifs/breaking/bd-twist-2000.gif" alt="">
                             </div>
                             <figcaption class="dir-card-element card-element-text">
                                 <div class="flex-line headline3">
@@ -213,7 +224,7 @@
             <section id="instructors" class="instructors padding-top">
                 <div class="instructors-container sec-container ">
                     <h2 class="headline2">Инструкторы</h2>
-                    <div class="instructor-cards  row">
+                    <div class="instructor-cards mt-5 row">
                         <div class="instructor-card col-lg-4 col-md-6 p-1">
                             <figure class="instructor-description">
                                 <img src="imgs/avatars/av-1.jpg" alt="">
@@ -623,7 +634,7 @@
                         <p>Улица Клубова 1, здание 1</p>
                     </div>
                     <div class="information numbers">
-                        <h4 class="headline4">Номер</h4>
+                        <h4 class="headline4">Телефон</h4>
                         <a href="tel:8(8172)65-75-41">+7 (962) 963-39-44</a>
                     </div>
 
@@ -641,9 +652,9 @@
     </main>
 
 
-    <footer class="p-3" id="info">
+    <footer class="p-1" id="info">
         <div class="footer-main d-md-flex justify-content-between align-items-center">
-            <div class="footer-logo ">Sport<span>Art</span>
+            <div class="footer-logo text-center">Sport<span>Art</span>
             </div>
 
             <div class="col-6 col-md-2 mb-3">
@@ -659,10 +670,10 @@
 
 
 
-            <div class="footer-subscribe col-md-5 offset-md-1 mb-3">
+            <div class="footer-subscribe col-md-5 offset-md-1 mb-3 ">
                 <form>
-                    <h5>Хотите узнавать всё первыми?!</h5>
-                    <p>Ежемесячный дайджест всего нового и интересного от нас.</p>
+                    <h5 class="d-none d-md-block">Хотите узнавать всё первыми?!</h5>
+                    <p class="d-none d-md-block">Ежемесячный дайджест всего нового и интересного от нас.</p>
                     <div class="d-flex flex-column flex-sm-row w-100 gap-2">
                         <label for="email" class="visually-hidden">Адрес электронной почты</label>
                         <input id="email" type="email" class="form-control" placeholder="Адрес электронной почты">
@@ -672,13 +683,13 @@
             </div>
         </div>
 
-        <div class="d-flex flex-column flex-sm-row justify-content-between py-4 my-4 border-top">
+        <div class="d-flex flex-column flex-sm-row justify-content-between py-4 my-4 border-top text-center gap-3">
             <p>&copy; 2025 Спорт клуб SportArt. Все права защищены.</p>
-            <ul class="footer-icons list-unstyled d-flex">
-                <li class="ms-3"><a class="link-body-emphasis" href="#"><img src="imgs/icons/vk1.svg" alt=""></a></li>
-                <li class="ms-3"><a class="link-body-emphasis" href="#"><img src="imgs/icons/telegram1.svg" alt=""></a>
-                </li>
-            </ul>
+            <div class="footer-icons d-flex justify-content-evenly ">
+                <a class="link-body-emphasis" href="#"><img src="imgs/icons/vk1.svg" alt=""></a>
+                <a class="link-body-emphasis" href="#"><img src="imgs/icons/telegram1.svg" alt=""></a>
+
+            </div>
         </div>
     </footer>
 
