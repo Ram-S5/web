@@ -126,9 +126,7 @@ header {
     left: auto;
     z-index: 1000;
 
-    /* background: #636363; */
     background: linear-gradient(0deg, rgb(0 0 0 / 12%) 0%, rgb(0 0 0 / 61%) 10%, rgb(0 0 0 / 92%) 25%, rgb(0 0 0) 100%);
-    /* background: linear-gradient(0deg, rgba(99, 99, 99, 0.52) 0%, rgba(61, 61, 61, 0.9) 10%, rgba(31, 31, 31, 0.97) 25%, rgba(0, 0, 0, 1) 100%); */
 }
 
 .header-container {
@@ -454,18 +452,9 @@ main {
 
 /*-Секция "Инструкторский состав"-*/
 
-
-/* .instructors {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-} */
-
 .instructor-cards {
-    /* width: 100%; */
     display: flex;
     justify-content: space-evenly;
-    /* gap: 50px; */
 }
 
 .instructor-description img {
@@ -509,11 +498,9 @@ main {
 }
 
 .mail-numbers-address {
-    /* width: 1000px; */
     margin: 0 auto;
     display: flex;
     flex-wrap: wrap;
-    /* justify-content: space-between; */
     align-items: center;
     gap: 20px;
 }
@@ -568,7 +555,6 @@ main {
     width: 30px;
     height: 30px;
 }
-
 
 
 
