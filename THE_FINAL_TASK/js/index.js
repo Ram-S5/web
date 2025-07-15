@@ -11,14 +11,14 @@
 // })
 
 
-const burger = document.querySelector('.burger');
+// const burger = document.querySelector('.burger');
 
-burger.addEventListener('click', () => {
-    burger.classList.toggle('active');
-    // if (burger.classList.contains('active')) { burgerMenu.style.right = "0px"; }
-    // else { burgerMenu.style.right = "-200px"; }
+// burger.addEventListener('click', () => {
+//     burger.classList.toggle('active');
+//     if (burger.classList.contains('active')) { burgerMenu.style.right = "0px"; }
+//     else { burgerMenu.style.right = "-200px"; }
 
-});
+// });
 
 
 
