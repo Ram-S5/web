@@ -340,19 +340,12 @@ main {
 
 /*-Секция "Герой"-*/
 .hero {
-    /* background: radial-gradient(circle, rgba(255, 255, 255, 0) 0%, var(--bg-color) 100%), url(../imgs/images/tricking-showact.jpg);
-    background-size: contain;
-    background-position-x: center;
-    background-position-y: center;
-    background-repeat: no-repeat;
-    background-attachment: fixed;*/
+   
     height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
-    /* margin-top:200px ; */
-    /* padding-top: 100px; */
     z-index: 10;
 }
 
@@ -503,9 +496,15 @@ main {
     border-bottom: 1px solid var(--accent-color);
 }
 
-.instructor-card>q {
+.instructor-card{
+    justify-items: center;
+}
+
+.instructor-card q {
+    display: block;
     background-color: var(--accent-color);
     color: var(--bg-color);
+    line-height: 1.2;
 }
 
 .instructors-text {
