@@ -286,9 +286,6 @@ header {
     #burger-btn-menu-close {
         position: absolute;
         bottom: 20px;
-    }
-
-    #burger-btn-menu-close {
         display: block;
         color: rgb(255, 255, 255);
     }
@@ -636,6 +633,10 @@ main {
 
     .buttons {
         margin: 0;
+    }
+
+    .about-us-container{
+padding: 0 40px;
     }
 
 }
