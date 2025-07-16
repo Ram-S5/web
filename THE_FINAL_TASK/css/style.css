@@ -171,6 +171,10 @@ header {
 
 }
 
+.account:hover {
+    color: var(--accent-color);
+}
+
 .account img {
     width: 30px;
     height: 30px;
@@ -190,20 +194,36 @@ header {
     max-width: 60%;
 }
 
-#burger-menu button {
-    display: none;
-}
-
-
 #burger-btn {
     display: none;
     background: none;
     border: none;
     cursor: pointer;
-    padding: 10px;
+    padding: 12px;
     z-index: 1001;
     border-radius: 50%;
     box-shadow: 0 0 20px var(--text-color);
+    width: 50px;
+    height: 50px;
+}
+
+#burger-btn-menu-close {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
+    padding: 12px;
+    z-index: 1001;
+    border-radius: 50%;
+    box-shadow: 0 0 20px var(--text-color);
+}
+
+#burger-btn-menu-close:hover,
+#burger-btn:hover {
+    box-shadow: 0 0 20px var(--accent-color);
+
 }
 
 .menu-burger__line {
@@ -268,14 +288,25 @@ header {
         bottom: 20px;
     }
 
-    #burger-menu button {
+    #burger-btn-menu-close {
         display: block;
-        margin: 0 auto;
-        padding: 10px 30px;
-        background: var(--accent-color);
-        color: wheat;
-        border-radius: 5px;
-        border-radius: 50px;
+        color: rgb(255, 255, 255);
+    }
+
+    .menu-burger-close__line {
+        position: relative;
+        display: block;
+        /* width: 25px; */
+        height: 2px;
+        background-color: var(--text-color);
+    }
+
+    .menu-burger-close__line:first-child {
+        transform: translateY(10%) rotate(-45deg);
+    }
+
+    .menu-burger-close__line:last-child {
+        transform: translateY(-100%) rotate(45deg);
     }
 
     .account {
@@ -425,7 +456,7 @@ main {
 .card-element-text {
     align-items: center;
     justify-content: space-evenly;
-    padding: 20px;
+    padding: 20px 0;
 }
 
 /*Кнопки слайдера*/
@@ -569,7 +600,7 @@ main {
     }
 
     .headline2 {
-        font-size: 24px;
+        font-size: 32px;
         letter-spacing: 1px;
         margin-bottom: 10px;
     }
@@ -610,7 +641,7 @@ main {
 }
 
 
-@media screen and (min-width: 375px) and (max-width: 800px) {
+@media screen and (min-width: 374px) and (max-width: 800px) {
     .logo-text {
         font-size: 22px;
     }
@@ -618,6 +649,7 @@ main {
     .headline2 {
         font-size: 24px;
         letter-spacing: 1px;
+        margin-bottom: 30px;
     }
 
 
@@ -670,13 +702,13 @@ main {
 
     .card-element-text {
         height: max-content;
-
+        padding: 20px 0;
     }
 
 }
 
 
-@media (max-width: 375px) {
+@media (max-width: 374px) {
 
     .logo-text {
         font-size: 16px;
