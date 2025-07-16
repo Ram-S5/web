@@ -95,16 +95,13 @@ body {
     color: var(--text-color);
 
     background-color: #000000;
-    background: radial-gradient(circle, rgba(255, 255, 255, 0) 0%, var(--bg-color) 100%), url(../imgs/images/tricking-showact.jpg);
+    background: radial-gradient(circle, rgba(0, 0, 0, 0.1) 0%, var(--bg-color) 100%), url(../imgs/images/tricking-showact.jpg), var(--bg-color);
     background-size: cover;
     background-position-x: center;
     background-position-y: center;
     background-repeat: no-repeat;
     background-attachment: fixed;
 }
-
-
-
 
 .sec-container {
     width: 100%;
@@ -340,7 +337,7 @@ main {
 
 /*-Секция "Герой"-*/
 .hero {
-   
+
     height: 100vh;
     display: flex;
     justify-content: center;
@@ -496,7 +493,7 @@ main {
     border-bottom: 1px solid var(--accent-color);
 }
 
-.instructor-card{
+.instructor-card {
     justify-items: center;
 }
 
@@ -634,12 +631,33 @@ main {
         margin: 0;
     }
 
-    .about-us-container{
-padding: 0 40px;
+    .about-us-container {
+        padding: 0 40px;
     }
 
 }
 
+@media screen and (max-width:992px) {
+    body {
+        background-size: auto 80%;
+    }
+}
+@media screen and (max-width:768px) {
+    body {
+        background-size: auto 65%;
+    }
+}
+@media screen and (max-width:576px) {
+    body {
+        background-size: auto 50%;
+    }
+}
+
+@media screen and (max-width:500px) {
+    body {
+        background-size: auto 35%;
+    }
+}
 
 @media screen and (min-width: 374px) and (max-width: 800px) {
     .logo-text {
@@ -651,8 +669,6 @@ padding: 0 40px;
         letter-spacing: 1px;
         margin-bottom: 30px;
     }
-
-
 
     .headline3,
     .headline4 {
