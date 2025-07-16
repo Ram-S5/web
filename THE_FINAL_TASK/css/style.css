@@ -194,6 +194,11 @@ header {
     max-width: 60%;
 }
 
+#burger-menu a:hover {
+    color: wheat;
+    text-decoration: underline;
+}
+
 #burger-btn {
     display: none;
     background: none;
@@ -276,11 +281,6 @@ header {
         color: var(--accent-color);
         transition: 1s;
         width: 100%;
-    }
-
-    #burger-menu a:hover {
-        color: wheat;
-        text-decoration: underline;
     }
 
     #burger-btn-menu-close {
