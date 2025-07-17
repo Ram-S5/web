@@ -378,14 +378,32 @@ main {
 
 }
 
-.hero button {
+.hero-btn {
+    display: block;
     font-family: var(--font-normal);
     background: var(--accent-color);
     color: var(--text-color);
-    border: none;
     border-radius: 5px;
-
+    padding: 5px;
 }
+
+.hero-btn:hover {
+    display: block;
+    font-family: var(--font-normal);
+    background: var(--accent-color);
+    color: var(--text-color);
+    box-shadow: 0 0 10px var(--text-color);
+    transform: scale(1.1);
+}
+
+.hero-btn:active {
+    font-family: var(--font-normal);
+    background: var(--accent-color);
+    color: var(--text-color);
+    box-shadow: 0 0 10px var(--text-color);
+    transform: scale(0.9);
+}
+
 
 
 
@@ -562,7 +580,7 @@ main {
     color: var(--text-color);
 }
 
-.btn-style {
+.footer-btn-style {
     font-family: var(--font-normal);
     background: var(--accent-color);
 }
@@ -640,11 +658,13 @@ main {
         background-size: auto 80%;
     }
 }
+
 @media screen and (max-width:768px) {
     body {
         background-size: auto 65%;
     }
 }
+
 @media screen and (max-width:576px) {
     body {
         background-size: auto 50%;
