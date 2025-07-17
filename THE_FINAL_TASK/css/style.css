@@ -378,14 +378,32 @@ main {
 
 }
 
-.hero button {
+.hero-btn {
+    display: block;
     font-family: var(--font-normal);
     background: var(--accent-color);
     color: var(--text-color);
-    border: none;
     border-radius: 5px;
-
+    padding: 5px;
 }
+
+.hero-btn:hover {
+    display: block;
+    font-family: var(--font-normal);
+    background: var(--accent-color);
+    color: var(--text-color);
+    box-shadow: 0 0 10px var(--text-color);
+    transform: scale(1.1);
+}
+
+.hero-btn:active {
+    font-family: var(--font-normal);
+    background: var(--accent-color);
+    color: var(--text-color);
+    box-shadow: 0 0 10px var(--text-color);
+    transform: scale(0.9);
+}
+
 
 
 
@@ -532,6 +550,7 @@ main {
     display: flex;
     flex-direction: column;
     align-items: center;
+    min-width: 200px;
 }
 
 
@@ -545,8 +564,7 @@ main {
 
 .footer-logo {
     height: 300px;
-    background-color: radial-gradient(circle, rgba(0, 0, 0, 1) 67%, rgba(0, 0, 0, 0.8) 85%, rgba(92, 0, 0, 0) 100%);
-    background-image: url(../imgs/logo.png);
+    background-image: url(../imgs/logo.png), radial-gradient(circle, rgba(0, 0, 0, 1) 45%, rgba(0, 0, 0, 0) 100%);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -562,7 +580,7 @@ main {
     color: var(--text-color);
 }
 
-.btn-style {
+.footer-btn-style {
     font-family: var(--font-normal);
     background: var(--accent-color);
 }
@@ -570,6 +588,7 @@ main {
 .footer-icons {
     display: flex;
     gap: 20px;
+    border-radius: 50%;
 }
 
 .footer-icons img {
@@ -640,11 +659,21 @@ main {
         background-size: auto 80%;
     }
 }
+
 @media screen and (max-width:768px) {
     body {
         background-size: auto 65%;
     }
 }
+
+@media screen and (min-width:550px)and (max-width:768px) {
+    .footer-logo {
+        background-size: 70% auto;
+    }
+}
+
+
+
 @media screen and (max-width:576px) {
     body {
         background-size: auto 50%;
