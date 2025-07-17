@@ -111,18 +111,19 @@ body {
 }
 
 .padding-top {
-    padding-top: 110px;
+    padding-top: 70px;
+    scroll-margin-top: 50px;
 }
 
 
 /*-----Хэдер-----*/
 header {
-    position: fixed;
+    position: sticky;
     width: 100%;
     top: 0;
     left: auto;
     z-index: 1000;
-
+    /* scroll-margin-top: 1em; */
     background: linear-gradient(0deg, rgb(0 0 0 / 12%) 0%, rgb(0 0 0 / 61%) 10%, rgb(0 0 0 / 92%) 25%, rgb(0 0 0) 100%);
 }
 
