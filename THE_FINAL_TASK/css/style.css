@@ -493,15 +493,13 @@ main {
     border-bottom: 1px solid var(--accent-color);
 }
 
-.instructor-card {
-    justify-items: center;
-}
-
 .instructor-card q {
     display: block;
     background-color: var(--accent-color);
     color: var(--bg-color);
     line-height: 1.2;
+    max-width: 255px;
+    margin: 0 auto;
 }
 
 .instructors-text {
